@@ -1,0 +1,1 @@
+# shoji-moriya.github.io
