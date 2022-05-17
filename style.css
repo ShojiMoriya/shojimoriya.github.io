@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+body{
+    color: #383e45;
+    font-size: 14.4px;
+    font-family: 'Caveat', cursive;
+    line-height: 1.5;
+    background-color: #cce5f9;
+}
+
+.wrapper{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 12%;
+}
+
+/* header */
+
+header{
+    height: 50px;
+    line-height: 50px;
+}
+
+header nav ul{
+    display: flex;
+}
+
+header nav ul li{
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+header nav ul li a{
+    display: block;
+    color: #383e45;
+    text-decoration: none;
+    font-family: 'Itim', cursive;
+}
+
+header nav ul li a:hover{
+    opacity: 0.5;
+    color: #0000EE;
+}
+
+/* main */
+
+.mainvisual img{
+    height: 100%;
+    max-height: 350px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+
+.name{
+    margin: 20px auto 40px;
+    font-size: 67px;
+    display: flex;
+}
+
+.name img{
+    margin-left: 100px;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+/* section */
+
+section h1{
+    font-family: 'Itim', cursive;
+    font-size: 40px;
+}
+
+section .content{
+    font-size: 25px;
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+
+
+/* footer */
+
+footer{
+    position: absolute;
+    padding-left: 1%;
+}
+
+@media(max-width: 600px){
+    .name{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .name img{
+        margin: 0 auto;
+    }
+
+    section{
+        text-align: center;
+    }
+}
