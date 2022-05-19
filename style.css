@@ -12,7 +12,7 @@ body{
 .wrapper{
     max-width: 960px;
     margin: 0 auto;
-    padding: 0 1０%;
+    padding: 0 10%;
 }
 
 /* header */
@@ -28,7 +28,7 @@ header nav ul{
 
 header nav ul li{
     margin: 0 auto;
-    font-size: 16px;
+    font-size: 12px;
 }
 
 header nav ul li a{
@@ -71,12 +71,17 @@ header nav ul li a:hover{
 section h1{
     font-family: 'Itim', cursive;
     font-size: 40px;
+    line-height: 1.0;
+    padding: 0.2em 0.5em;/*文字の上下 左右の余白*/
+    background: #f4f4f4;/*背景色*/
+    border-left: solid 5px #96c3ee;/*左線*/
+    border-bottom: solid 3px #d7d7d7;/*下線*/
 }
 
 section .content{
     font-size: 25px;
-    margin-bottom: 20px;
-    padding-left: 30px;
+    margin:20px 0px;
+    padding:0 30px;
 }
 
 
@@ -87,7 +92,7 @@ footer{
     padding-left: 1%;
 }
 
-@media(max-width: 600px){
+@media(max-width: 660px){
     .name{
         display: flex;
         flex-direction: column;
@@ -100,5 +105,9 @@ footer{
 
     section{
         text-align: center;
+    }
+
+    section h1{
+        border-right: solid 5px #96c3ee;/*右線*/
     }
 }
