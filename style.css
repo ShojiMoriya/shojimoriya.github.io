@@ -28,7 +28,7 @@ header nav ul{
 
 header nav ul li{
     margin: 0 auto;
-    font-size: 12px;
+    font-size: 14.4px;
 }
 
 header nav ul li a{
@@ -103,6 +103,10 @@ footer{
 }
 
 @media(max-width: 660px){
+    header nav ul li{
+        font-size: 12px;
+    }
+    
     .name{
         display: flex;
         flex-direction: column;
