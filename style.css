@@ -43,6 +43,11 @@ header nav ul li a:hover{
     color: #0000EE;
 }
 
+header nav ul :last-child{
+    margin: 0 0 0 15px;
+}
+
+
 /* main */
 
 .mainvisual img{
