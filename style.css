@@ -4,15 +4,15 @@
 body{
     color: #383e45;
     font-size: 14.4px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Itim', sans-serif;
     line-height: 1.5;
-    background-color: #cef3fc;
+    background-color: #edfbff;
 }
 
 .wrapper{
     max-width: 960px;
     margin: 0 auto;
-    padding: 0 10%;
+    padding:a 0 3%;
 }
 
 /* header */
@@ -35,16 +35,12 @@ header nav ul li a{
     display: block;
     color: #383e45;
     text-decoration: none;
-    font-family: 'Itim', cursive;
+    font-family: 'Itim', serif;
 }
 
 header nav ul li a:hover{
     opacity: 0.5;
     color: #0000EE;
-}
-
-header nav ul :last-child{
-    margin: 0 0 0 15px;
 }
 
 
@@ -74,7 +70,7 @@ header nav ul :last-child{
 /* section */
 
 section h1{
-    font-family: 'Itim', cursive;
+    font-family: 'Itim', serif;
     font-size: 40px;
     line-height: 1.0;
     padding: 0.2em 0.5em;/*文字の上下 左右の余白*/
@@ -84,7 +80,7 @@ section h1{
 }
 
 section .content{
-    font-size: 25px;
+    font-size: 22px;
     margin:20px 0px;
     padding:0 30px;
 }
