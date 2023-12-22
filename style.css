@@ -6,7 +6,7 @@ body{
     font-size: 14.4px;
     font-family: 'Itim', sans-serif;
     line-height: 1.5;
-    background-color: #edfbff;
+    background-color: #f4fafd;
 }
 
 .wrapper{
@@ -28,7 +28,7 @@ header nav ul{
 
 header nav ul li{
     margin: 0 auto;
-    font-size: 14.4px;
+    font-size: 20px;
 }
 
 header nav ul li a{
@@ -48,14 +48,15 @@ header nav ul li a:hover{
 
 .mainvisual img{
     height: 100%;
-    max-height: 300px;
+    max-height: 220px;
     width: 100%;
     object-fit: cover;
     margin-bottom: 30px;
 }
 
 .name{
-    margin: 20px auto 40px;
+    /* margin: 20px 20px 40px; */
+    padding-left: 20px;
     font-size: 67px;
     display: flex;
 }
@@ -74,13 +75,20 @@ section h1{
     font-size: 40px;
     line-height: 1.0;
     padding: 0.2em 0.5em;/*文字の上下 左右の余白*/
+    margin-left: 10px;
     background: #f4f4f4;/*背景色*/
     border-left: solid 5px #96c3ee;/*左線*/
     border-bottom: solid 3px #d7d7d7;/*下線*/
 }
 
+section h2{
+    font-family: 'Itim', serif;
+    font-size: 30px;
+    padding: 0em 0.5em;/*文字の上下 左右の余白*/
+}
+
 section .content{
-    font-size: 22px;
+    font-size: 20px;
     margin:20px 0px;
     padding:0 30px;
 }
@@ -100,7 +108,7 @@ footer{
 
 @media(max-width: 660px){
     header nav ul li{
-        font-size: 12px;
+        font-size: 14px;
     }
     
     .name{
