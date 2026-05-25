@@ -1,260 +1,346 @@
 <!DOCTYPE html>
-<html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Shoji Moriya</title>
-        <link rel="shortcut icon" href="shortcut.ico">
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header class="wrapper">
-            <nav>
-                <ul>
-                    <li><a href="#About">About</a></li>
-                    <li><a href="#Interests">Interests</a></li>
-                    <li><a href="#Publications">Publications</a></li>
-                    <li><a href="#Awards">Awards</a></li>
-                    <li><a href="#Activities">Activities</a></li>
-                    <li><a href="#Contact">Contact</a></li>
-                    <li><a href="https://twitter.com/shojimoriya_nlp"><img src="twittericon.svg" alt="twitter-icon"></a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <div class="mainvisual">
-                <img src="mainvisual.png" alt="main visual">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoji Moriya | Ph.D. Student, Tohoku University</title>
+  <meta name="description" content="Shoji Moriya is a Ph.D. student (D2) at Tohoku University, researching natural language processing, dialogue systems, and human-computer interaction.">
+  <meta property="og:title" content="Shoji Moriya | Ph.D. Student, Tohoku University">
+  <meta property="og:description" content="Ph.D. student at Tohoku University, researching NLP, dialogue systems, and HCI.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://shojimoriya.github.io/profile.png">
+  <link rel="icon" href="shortcut.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="lang-en">
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+        <span class="lang-toggle-option" data-lang="en">EN</span>
+        <span class="lang-toggle-sep">/</span>
+        <span class="lang-toggle-option" data-lang="ja">JP</span>
+      </button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#publications"><span class="en">Publications</span><span class="ja">業績</span></a></li>
+        <li><a href="#awards"><span class="en">Awards</span><span class="ja">受賞</span></a></li>
+        <li><a href="#education"><span class="en">Education</span><span class="ja">経歴</span></a></li>
+        <li><a href="#activities"><span class="en">Activities</span><span class="ja">活動</span></a></li>
+        <li><a href="#contact"><span class="en">Contact</span><span class="ja">連絡先</span></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-content">
+      <div class="hero-photo">
+        <img src="profile.png" alt="Shoji Moriya">
+      </div>
+      <div class="hero-text">
+        <h1><span class="en">Shoji Moriya</span><span class="ja">守屋 彰二</span></h1>
+        <p class="hero-subtitle"><span class="en">A Ph.D. Student (D2) at Tohoku University</span><span class="ja">東北大学 博士課程（D2）</span></p>
+        <p class="hero-affiliation"><span class="en">Member of <a href="https://www.nlp.ecei.tohoku.ac.jp/">Tohoku NLP Group</a> (Sakaguchi, Inui Lab)</span><span class="ja"><a href="https://www.nlp.ecei.tohoku.ac.jp/">東北大学 自然言語処理研究グループ</a>（坂口・乾研究室）所属</span></p>
+        <div class="hero-links">
+          <a href="https://x.com/shojimoriya_nlp" target="_blank" rel="noopener" aria-label="X">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="mailto:shoji.moriya.q7@dc.tohoku.ac.jp" aria-label="Email">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </a>
+        </div>
+        <div class="interests">
+          <h3><span class="en">Research Interests</span><span class="ja">研究分野</span></h3>
+          <ul class="tag-list">
+            <li><span class="en">Natural Language Processing</span><span class="ja">自然言語処理</span></li>
+            <li><span class="en">Dialogue Systems</span><span class="ja">対話システム</span></li>
+            <li><span class="en">Human-Computer Interaction</span><span class="ja">ヒューマンコンピュータインタラクション</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Publications -->
+    <section id="publications" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title"><span class="en">Publications</span><span class="ja">業績</span></h2>
+
+        <h3 class="subsection-title"><span class="en">International Journal</span><span class="ja">国際ジャーナル</span></h3>
+        <ol class="pub-list">
+          <li>
+            <span class="pub-authors"><u>Shoji Moriya</u>*, Daiki Shiono*, Riki Fujihara, Yosuke Kishinami, Subaru Kimura, Shusaku Sone, Reina Akama, Yuta Matsumoto, Jun Suzuki &amp; Kentaro Inui (*equal contributions).</span> <span class="pub-title">Aoba_v3 bot: a multimodal chatbot system combining rules and various response generation models</span>. <span class="pub-venue">Advanced Robotics, Volume 37, Issue 21, pp.1392&ndash;1405, 2023. (<a href="https://www.tandfonline.com/action/journalInformation?show=journalMetrics&journalCode=tadr20">22% acceptance rate per year</a>).</span>
+          </li>
+        </ol>
+
+        <h3 class="subsection-title"><span class="en">International Conference</span><span class="ja">国際会議</span></h3>
+        <ol class="pub-list">
+          <li>
+            <span class="pub-authors">Shinnosuke Nozue*, Yuto Nakano*, Yotaro Watanabe, Meguru Takasaki, <u>Shoji Moriya</u>, Reina Akama and Jun Suzuki (*equal contributions).</span> <span class="pub-title">Enhancing Persuasive Dialogue Agents by Synthesizing Cross-Disciplinary Communication Strategies</span>. <span class="pub-venue">In Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing (EMNLP2025): Industry Track, pages 2287&ndash;2312, November 2025.</span>
+          </li>
+          <li>
+            <span class="pub-authors">Ikumi Numaya, <u>Shoji Moriya</u>, Shiki Sato, Reina Akama and Jun Suzuki.</span> <span class="pub-title">How Stylistic Similarity Shapes Preferences in Dialogue Dataset with User and Third Party Evaluations</span>. <span class="pub-venue">In Proceedings of the 26th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL 2025), pages 192&ndash;205, August 2025.</span>
+          </li>
+          <li>
+            <span class="pub-authors">Tetsuro Takahashi, Hirofumi Kikuchi, Jie Yang, Hiroyuki Nishikawa, Masato Komuro, Ryosaku Makino, Shiki Sato, Yuta Sasaki, Shinji Iwata, Asahi Hentona, Takato Yamazaki, <u>Shoji Moriya</u>, Masaya Ohagi, Zhiyang Qi, Takashi Kodama, Akinobu Lee, Takashi Minato, Kurima Sakai, Tomo Funayama, Kotaro Funakoshi, Mayumi Usami, Michimasa Inaba and Ryuichiro Higashinaka.</span> <span class="pub-title">Analyzing Dialogue System Behavior in a Specific Situation Requiring Interpersonal Consideration</span>. <span class="pub-venue">In Proceedings of the 26th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL 2025), pages 166&ndash;171, August 2025.</span>
+          </li>
+          <li>
+            <span class="pub-authors">Shiki Sato, Shinji Iwata, Asahi Hentona, Yuta Sasaki, Takato Yamazaki, <u>Shoji Moriya</u>, Masaya Ohagi, Hirofumi Kikuchi, Jie Yang, Zhiyang Qi, Takashi Kodama, Akinobu Lee, Masato Komuro, Hiroyuki Nishikawa, Ryosaku Makino, Takashi Minato, Kurima Sakai, Tomo Funayama, Kotaro Funakoshi, Mayumi Usami, Michimasa Inaba, Tetsuro Takahashi and Ryuichiro Higashinaka.</span> <span class="pub-title">Key Challenges in Multimodal Task-Oriented Dialog Systems: Insights from a Large Competition-Based Dataset</span>. <span class="pub-venue">In Proceedings of the 26th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL 2025), pages 449&ndash;460, August 2025.</span>
+          </li>
+          <li>
+            <span class="pub-authors">Hirohane Takagi, <u>Shoji Moriya</u>, Takuma Sato, Manabu Nagao, Keita Higuchi.</span> <span class="pub-title">A Framework for Efficient Development and Debugging of Role-Playing Agents with Large Language Models</span>. <span class="pub-venue">The 30th Annual ACM Conference on Intelligent User Interfaces (IUI 2025), March 2025.</span>
+          </li>
+          <li>
+            <span class="pub-authors">Shinnosuke Nozue, Yuto Nakano, <u>Shoji Moriya</u>, Tomoki Ariyama, Kazuma Kokuta, Suchun Xie, Kai Sato, Shusaku Sone, Ryohei Kamei, Reina Akama, Yuichiroh Matsubayashi, Keisuke Sakaguchi.</span> <span class="pub-title">A Multimodal Dialogue System to Lead Consensus Building with Emotion-Displaying</span>. <span class="pub-venue">The Special Interest Group in discourse and dialogue (SIGDIAL 2024), pp. 669&ndash;673, September 2024.</span>
+          </li>
+          <li>
+            <span class="pub-authors">Ryuichiro Higashinaka, Tetsuro Takahashi, Michimasa Inaba, Zhiyang Qi, Yuta Sasaki, Kotrao Funakoshi, <u>Shoji Moriya</u>, Shiki Sato, Takashi Minato, Kurima Sakai, Tomo Funayama, Masato Komuro, Hiroyuki Nishikawa, Ryosaku Makino, Hirofumi Kikuchi, Mayumi Usami.</span> <span class="pub-title">Dialogue System Live Competition Goes Multimodal: Analyzing the Effects of Multimodal Information in Situated Dialogue Systems</span>. <span class="pub-venue">In Proceedings of the 14th International Workshop on Spoken Dialogue Systems Technology, 2024.</span>
+          </li>
+          <li>
+            <span class="pub-authors">Hiroto Kurita*, Ikumi Ito*, Hiroaki Funayama, Shota Sasaki, <u>Shoji Moriya</u>, Ye Mengyu, Kazuma Kokuta, Ryujin Hatakeyama, Shusaku Sone and Kentaro Inui (*equal contributions).</span> <span class="pub-title">TohokuNLP at SemEval-2023 Task 5: Clickbait Spoiling via Simple Seq2seq Generation and Ensembling</span>. <span class="pub-venue">In Proceedings of the 17th International Workshop on Semantic Evaluation, pp. 1756&ndash;1762, 2023.</span>
+          </li>
+        </ol>
+
+        <h3 class="subsection-title"><span class="en">Domestic Journal</span><span class="ja">国内ジャーナル</span></h3>
+        <ol class="pub-list pub-list-ja">
+          <li>
+            <span class="pub-authors">沼屋征海, <u>守屋彰二</u>, 佐藤志貴, 赤間怜奈, 鈴木潤.</span> <span class="pub-title">スタイル類似の知覚主体が対話評価に与える影響</span>. <span class="pub-venue">自然言語処理, Vol. 32, No. 4, pp. 1241&ndash;1271, December 2025.</span>
+          </li>
+        </ol>
+
+        <h3 class="subsection-title"><span class="en">Domestic Conference</span><span class="ja">国内学会</span></h3>
+        <ol class="pub-list pub-list-ja">
+          <li>
+            <span class="pub-authors"><u>守屋彰二</u>, 大萩雅也, 山崎天, 高山隼矢, 吉川克正, 樋口啓太.</span> <span class="pub-title">チャットボットの役割分離が信頼性と広告有用性に与える影響</span>. <span class="pub-venue">第30回 一般社団法人 情報処理学会シンポジウム（インタラクション2026）, 2026.</span>
+          </li>
+          <li>
+            <span class="pub-authors">沼屋征海, 赤間怜奈, <u>守屋彰二</u>, 佐藤志貴, 鈴木潤.</span> <span class="pub-title">人手評価データセットの統計的類似性と代替可能性</span>. <span class="pub-venue">言語処理学会第32回年次大会 (NLP2026), 2026.</span>
+          </li>
+          <li>
+            <span class="pub-authors">渡邉陽太郎, 吉田希世, 齋藤由佳, 髙﨑環, <u>守屋彰二</u>, 赤間怜奈, 鈴木潤.</span> <span class="pub-title">説得対話における認知スタイルを考慮したユーザシミュレータの分析</span>. <span class="pub-venue">第40回人工知能学会全国大会 (JSAI2026), 2026.</span>
+          </li>
+          <li>
+            <span class="pub-authors">高木洋羽, <u>守屋彰二</u>, 佐藤拓真, 永尾学, 樋口啓太.</span> <span class="pub-title">大規模言語モデルを用いたロールプレイエージェントの効率的な開発と動作検証のためのフレームワーク</span>. <span class="pub-venue">第29回 一般社団法人 情報処理学会シンポジウム（インタラクション2025）, 2025.</span>
+          </li>
+          <li>
+            <span class="pub-authors">佐藤志貴, 佐々木裕多, 岩田伸治, 山崎天, 小室允人, <u>守屋彰二</u>, 大萩雅也, 菊池浩史, 楊潔, 邊土名朝飛, 斉志揚, 児玉貴志, 李晃伸, 西川寛之, 牧野遼作, 港隆史, 境くりま, 船山智, 船越孝太郎, 宇佐美まゆみ, 稲葉通将, 高橋哲朗, 東中竜一郎.</span> <span class="pub-title">対話システムライブコンペティション7</span>. <span class="pub-venue">第103回人工知能学会 言語・音声理解と対話処理研究会, 2025.</span>
+          </li>
+          <li>
+            <span class="pub-authors">沼屋征海, <u>守屋彰二</u>, 佐藤志貴, 赤間怜奈, 鈴木潤.</span> <span class="pub-title">発話スタイルの類似とユーザ本人による対話の好ましさの相関</span>. <span class="pub-venue">言語処理学会第31回年次大会 (NLP2025), 2025.</span>
+          </li>
+          <li>
+            <span class="pub-authors"><u>守屋彰二</u>, 大萩雅也.</span> <span class="pub-title">バックトラッキングを活用したマルチエージェントシステムによる複数制約充足プランニング</span>. <span class="pub-venue">言語処理学会第31回年次大会 (NLP2025), 2025.</span>
+          </li>
+          <li>
+            <span class="pub-authors">駒田啓伍, 阿部香央莉, <u>守屋彰二</u>, 鈴木潤.</span> <span class="pub-title">柔軟な応対が求められる対話タスクでの動的スロットを用いた対話整合性向上</span>. <span class="pub-venue">2024年度人工知能学会全国大会(第38回), 2024.</span>
+          </li>
+          <li>
+            <span class="pub-authors">佐藤魁, <u>守屋彰二</u>, 赤間怜奈, 鈴木潤.</span> <span class="pub-title">応答候補の限られる発話に着目した参照応答ベースの評価基準の分析</span>. <span class="pub-venue">電子情報通信学会「言語理解とコミュニケーション(NLC)」情報処理学会「自然言語処理(NL)」合同研究会, 2024.</span>
+          </li>
+          <li>
+            <span class="pub-authors"><u>守屋彰二</u>, 佐藤志貴, 徳久良子, 赤間怜奈, 横井祥, 乾健太郎.</span> <span class="pub-title">選択性を考慮した語彙エントレインメント尺度</span>. <span class="pub-venue">言語処理学会第30回年次大会 (NLP2024), 2024.</span>
+          </li>
+          <li>
+            <span class="pub-authors">東中竜一郎, 高橋哲朗, 稲葉通将, 斉志揚, 佐々木裕多, 船越孝太郎, <u>守屋彰二</u>, 佐藤志貴, 港隆史, 境くりま, 船山智, 小室允人, 西川寛之, 牧野遼作, 菊池浩史, 宇佐美まゆみ.</span> <span class="pub-title">対話システムライブコンペティション6</span>. <span class="pub-venue">第99回人工知能学会 言語・音声理解と対話処理研究会 (第14回対話システムシンポジウム) (SLUD2023), 2023.</span>
+          </li>
+          <li>
+            <span class="pub-authors">中野雄斗*, 野末慎之介*, 穀田一真, 有山知希, 佐藤魁, 曾根周作, 亀井遼平, 謝素春, 成田風香, <u>守屋彰二</u>, 赤間怜奈, 松林優一郎, 坂口慶祐 (*第一著者と第二著者の貢献度は等しい).</span> <span class="pub-title">Hagi bot: LLMを用いた対話状態追跡と人間らしい振る舞いで自然な議論を行うマルチモーダル対話システム</span>. <span class="pub-venue">第99回人工知能学会 言語・音声理解と対話処理研究会 (第14回対話システムシンポジウム) (SLUD2023), 2023.</span>
+          </li>
+          <li>
+            <span class="pub-authors"><u>守屋彰二</u>, 佐藤志貴, 徳久良子, 赤間怜奈, 乾健太郎.</span> <span class="pub-title">統語構造に着目した対話エントレインメント分析の検討</span>. <span class="pub-venue">第18回NLP若手の会 シンポジウム (YANS2023), 2023.</span>
+          </li>
+          <li>
+            <span class="pub-authors"><u>守屋彰二</u>, 岸波洋介, 佐藤志貴, 徳久良子, 乾健太郎.</span> <span class="pub-title">程度を考慮したフォーマリティ変換のためのデータセットの収集と分析</span>. <span class="pub-venue">言語処理学会第29回年次大会 (NLP2023), 2023.</span>
+          </li>
+          <li>
+            <span class="pub-authors"><u>守屋彰二</u>*, 塩野大輝*, 岸波洋介, 藤原吏生, 木村昴, 松本悠太, 曾根周作, 赤間怜奈, 鈴木潤, 乾健太郎 (*第一著者と第二著者の貢献度は等しい).</span> <span class="pub-title">aoba_v3 bot: 多様な応答生成モデルとルールベースを統合したマルチモーダル雑談対話システム</span>. <span class="pub-venue">第96回人工知能学会 言語・音声理解と対話処理研究会 (第13回対話システムシンポジウム) (SLUD2022), 2022.</span>
+          </li>
+          <li>
+            <span class="pub-authors"><u>守屋彰二</u>, 岸波洋介, 徳久良子, 乾健太郎.</span> <span class="pub-title">能動的な対話システム実現に向けた談話マーカーの利用の検討</span>. <span class="pub-venue">第17回NLP若手の会 シンポジウム (YANS2022), 2022.</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Awards -->
+    <section id="awards" class="section">
+      <div class="container">
+        <h2 class="section-title"><span class="en">Awards</span><span class="ja">受賞</span></h2>
+        <ul class="award-list">
+          <li>
+            <strong><span class="en"><a href="https://www.anlp.jp/nlp2025/award.html">Committee Special Award</a> (32 out of 726 papers)</span><span class="ja"><a href="https://www.anlp.jp/nlp2025/award.html">委員特別賞</a>（全726件中、32件）</span></strong>
+            <p><span class="en">The 31st Annual Meeting of the Association for Natural Language Processing (NLP2025), 2025</span><span class="ja">言語処理学会第31回年次大会 (NLP2025), 2025</span></p>
+          </li>
+          <li>
+            <strong><span class="en"><a href="https://sites.google.com/view/dslc6/%E7%B5%90%E6%9E%9C">1st Place</a> out of 11 teams &mdash; Situation Track</span><span class="ja"><a href="https://sites.google.com/view/dslc6/%E7%B5%90%E6%9E%9C">最優秀賞</a>（全11チーム中、第1位）&mdash; シチュエーショントラック</span></strong>
+            <p><span class="en">Dialogue System Live Competition 6 (SLUD2023), 2023</span><span class="ja">対話システムライブコンペティション6 (SLUD2023), 2023</span></p>
+          </li>
+          <li>
+            <strong><span class="en"><a href="https://sites.google.com/view/dslc5/%E7%B5%90%E6%9E%9C">2nd Place</a> out of 11 teams &mdash; Open Track</span><span class="ja"><a href="https://sites.google.com/view/dslc5/%E7%B5%90%E6%9E%9C">優秀賞</a>（全11チーム中、第2位）&mdash; オープントラック</span></strong>
+            <p><span class="en">Dialogue System Live Competition 5 (SLUD2022), 2022</span><span class="ja">対話システムライブコンペティション5 (SLUD2022), 2022</span></p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title"><span class="en">Education</span><span class="ja">経歴</span></h2>
+        <ul class="education-list">
+          <li>
+            <span class="edu-period">2025 &ndash;</span>
+            <div>
+              <strong><span class="en">Ph.D. Student, Graduate School of Information Sciences, Tohoku University</span><span class="ja">東北大学 大学院情報科学研究科 博士課程</span></strong>
+              <p><span class="en">Tohoku NLP Group (Sakaguchi, Inui Lab)</span><span class="ja">自然言語処理研究グループ（坂口・乾研究室）</span></p>
             </div>
-            <div class="name wrapper">
-                <b>Shoji Moriya</b>
-                <img src="profile.png" alt="profile-icon">
+          </li>
+          <li>
+            <span class="edu-period">2023 &ndash; 2025</span>
+            <div>
+              <strong><span class="en">M.S., Graduate School of Information Sciences, Tohoku University</span><span class="ja">東北大学 大学院情報科学研究科 修士課程</span></strong>
+              <p><span class="en">Tohoku NLP Group (Sakaguchi, Inui Lab)</span><span class="ja">自然言語処理研究グループ（坂口・乾研究室）</span></p>
             </div>
-            <section id="About" class="About wrapper">
-                <h1>About</h1>
-                <div class="content">
-                    <p>A Master's Student (M2) at Tohoku University</p>
-                    <p>Member of <a href="https://www.nlp.ecei.tohoku.ac.jp/">Tohoku NLP Group</a> (Sakaguchi, Inui Lab)</p>
-                    <br>
-                </div>
-            </section>
-            <section id="Interests" class="Interests wrapper">
-                <h1>Interests</h1>
-                <div class="content">
-                    <p>Natural Language Processing</p>
-                    <p>Dialog System</p>
-                    <br>
-                </div>
-            </section>
-            <section id="Publications" class="Publications wrapper">
-                <h1>Publications</h1>
-                <!-- <br> -->
-                <h2>International Journal</h2>
-                <div class="content">
-                    <ul>
-                        <li>
-                            <u>Shoji Moriya</u>*, Daiki Shiono*, Riki Fujihara, Yosuke Kishinami, Subaru Kimura, Shusaku Sone, Reina Akama, Yuta Matsumoto, Jun Suzuki & Kentaro Inui (*equal contributions).
-                            <br>
-                            <strong>Aoba_v3 bot: a multimodal chatbot system combining rules and various response generation models</strong>.
-                            <br>
-                            <em>Advanced Robotics, 37:21, 1392-1405, DOI: 10.1080/01691864.2023.2240883 (<a href="https://www.tandfonline.com/action/journalInformation?show=journalMetrics&journalCode=tadr20">22% acceptance rate per year</a>).</em>
-                            <br><br>
-                        </li>
-                    </ul>
-                </div>
-                <h2>International Conference</h2>
-                <div class="content">
-                    <ul>
-                        <li>
-                            Hirohane Takagi, <u>Shoji Moriya</u>, Takuma Sato, Manabu Nagao, Keita Higuchi. 
-                            <br>
-                            <strong>A Framework for Efficient Development and Debugging of Role-Playing Agents with Large Language Models</strong>.
-                            <br>
-                            <em>The 30th Annual ACM Conference on Intelligent User Interfaces (IUI 2025), March 2025.</em>
-                            <br><br>
-                        </li>
-                        <li>
-                            Shinnosuke Nozue, Yuto Nakano, <u>Shoji Moriya</u>, Tomoki Ariyama, Kazuma Kokuta, Suchun Xie, Kai Sato, Shusaku Sone, Ryohei Kamei, Reina Akama, Yuichiroh Matsubayashi, Keisuke Sakaguchi.
-                            <br>
-                            <strong>A Multimodal Dialogue System to Lead Consensus Building with Emotion-Displaying.</strong>
-                            <br>
-                            <em>The Special Interest Group in discourse and dialogue (SIGDIAL 2024), pp. 669-673, September 2024.</em>
-                            <br><br>
-                        </li>
-                        <li>
-                            Ryuichiro Higashinaka, Tetsuro Takahashi, Michimasa Inaba, Zhiyang Qi, Yuta Sasaki, Kotrao Funakoshi, <u>Shoji Moriya</u>, Shiki Sato, Takashi Minato, Kurima Sakai, Tomo Funayama, Masato Komuro, Hiroyuki Nishikawa, Ryosaku Makino, Hirofumi Kikuchi, Mayumi Usami.
-                            <br>
-                            <strong>Dialogue System Live Competition Goes Multimodal: Analyzing the Effects of Multimodal Information in Situated Dialogue Systems</strong>.
-                            <br>
-                            <em>The 14th International Workshop on Spoken Dialogue Systems Technology (IWSDS2024), March 2024.</em>
-                            <br><br>
-                        </li>
-                        <li>
-                            Hiroto Kurita*, Ikumi Ito*, Hiroaki Funayama, Shota Sasaki, <u>Shoji Moriya</u>, Ye Mengyu, Kazuma Kokuta, Ryujin Hatakeyama, Shusaku Sone and Kentaro Inui (*equal contributions).
-                            <br>
-                            <strong>TohokuNLP at SemEval-2023 Task 5: Clickbait Spoiling via Simple Seq2seq Generation and Ensembling</strong>.
-                            <br>
-                            <em>In Proceedings of the 17th International Workshop on Semantic Evaluation (SemEval), pp. 1756–1762, July 2023.</em>
-                            <br><br>
-                        </li>
-                    </ul>
-                </div>
-                <h2>Domestic Conference</h2>
-                <div class="content-ja">
-                    <ul>
-                        <li>
-                            高木洋羽, <u>守屋彰二</u>, 佐藤拓真, 永尾学, 樋口啓太.
-                            <br>
-                            <strong>大規模言語モデルを用いたロールプレイエージェントの効率的な開発と動作検証のためのフレームワーク</strong>.
-                            <br>
-                            <em>第29回 一般社団法人 情報処理学会シンポジウム（インタラクション2025）, 2025.</em>
-                            <br><br>
-                        </li>
-                        <li>
-                            佐藤志貴, 佐々木裕多, 岩田伸治, 山崎天, 小室允人, <u>守屋彰二</u>, 大萩雅也, 菊池浩史, 楊潔, 邊土名朝飛, 斉志揚, 児玉貴志, 李晃伸, 西川寛之, 牧野遼作, 港隆史, 境くりま, 船山智, 船越孝太郎, 宇佐美まゆみ, 稲葉通将, 高橋哲朗, 東中竜一郎.
-                            <br>
-                            <strong>対話システムライブコンペティション7</strong>.
-                            <br>
-                            <em>第103回人工知能学会 言語・音声理解と対話処理研究会, 2025.</em>
-                            <br><br>
-                        </li>
-                        <li>
-                            沼屋征海, <u>守屋彰二</u>, 佐藤志貴, 赤間怜奈, 鈴木潤.
-                            <br>
-                            <strong>発話スタイルの類似とユーザ本人による対話の好ましさの相関</strong>.
-                            <br>
-                            <em>言語処理学会第31回年次大会 (NLP2025), 2025.</em>
-                            <br><br>
-                        </li>
-                        <li>
-                            <u>守屋彰二</u>, 大萩雅也.
-                            <br>
-                            <strong>バックトラッキングを活用したマルチエージェントシステムによる複数制約充足プランニング</strong>.
-                            <br>
-                            <em>言語処理学会第31回年次大会 (NLP2025), 2025.</em>
-                            <br><br>
-                        </li>
-                        <li>
-                            駒田啓伍, 阿部香央莉, <u>守屋彰二</u>, 鈴木潤.
-                            <br>
-                            <strong>柔軟な応対が求められる対話タスクでの動的スロットを用いた対話整合性向上</strong>. 
-                            <br>
-                            <em>2024年度人工知能学会全国大会(第38回), 2024.</em>
-                            <br><br>
-                        </li>
-                        <li>
-                            佐藤魁, <u>守屋彰二</u>, 赤間怜奈, 鈴木潤.
-                            <br>
-                            <strong>応答候補の限られる発話に着目した参照応答ベースの評価基準の分析</strong>. 
-                            <br>
-                            <em>電子情報通信学会「言語理解とコミュニケーション(NLC)」情報処理学会「自然言語処理(NL)」合同研究会, 2024.</em>
-                            <br><br>
-                        </li>
-                        <li>
-                            <u>守屋彰二</u>, 佐藤志貴, 徳久良子, 赤間怜奈, 横井祥, 乾健太郎.
-                            <br>
-                            <strong>選択性を考慮した語彙エントレインメント尺度</strong>. 
-                            <br>
-                            <em>言語処理学会第30回年次大会 (NLP2024), 2024.</em>
-                            <br><br>
-                        </li>
-                        <li>
-                            東中竜一郎, 高橋哲朗, 稲葉通将, 斉志揚, 佐々木裕多, 船越孝太郎, <u>守屋彰二</u>, 佐藤志貴, 港隆史, 境くりま, 船山智, 小室允人, 西川寛之, 牧野遼作, 菊池浩史, 宇佐美まゆみ
-                            <br>
-                            <strong>対話システムライブコンペティション6</strong>. 
-                            <br>
-                            <em>第99回人工知能学会 言語・音声理解と対話処理研究会 (第14回対話システムシンポジウム) (SLUD2023), 2023.</em>
-                            <br><br>
-                        </li>
-                        <li>
-                            中野雄斗*, 野末慎之介*, 穀田一真, 有山知希, 佐藤魁, 曾根周作, 亀井遼平, 謝素春, 成田風香, <u>守屋彰二</u>, 赤間怜奈, 松林優一郎, 坂口慶祐 (*第一著者と第二著者の貢献度は等しい).
-                            <br>
-                            <strong>Hagi bot: LLMを用いた対話状態追跡と人間らしい振る舞いで自然な議論を行うマルチモーダル対話システム</strong>. 
-                            <br>
-                            <em>第99回人工知能学会 言語・音声理解と対話処理研究会 (第14回対話システムシンポジウム) (SLUD2023), 2023.</em>
-                            <br><br>
-                        </li>
-                        <li>
-                            <u>守屋彰二</u>, 佐藤志貴, 徳久良子, 赤間怜奈, 乾健太郎.
-                            <br>
-                            <strong>統語構造に着目した対話エントレインメント分析の検討</strong>. 
-                            <br>
-                            <em>第18回NLP若手の会 シンポジウム (YANS2023), 2023.</em>
-                            <br><br>
-                        </li>
-                        <li>
-                            <u>守屋彰二</u>, 岸波洋介, 佐藤志貴, 徳久良子, 乾健太郎. 
-                            <br>
-                            <strong>程度を考慮したフォーマリティ変換のためのデータセットの収集と分析</strong>. 
-                            <br>
-                            <em>言語処理学会第29回年次大会 (NLP2023), 2023.</em>
-                            <br><br>
-                        </li>
-                        <li>
-                            <u>守屋彰二</u>*, 塩野大輝*, 岸波洋介, 藤原吏生, 木村昴, 松本悠太, 曾根周作, 赤間怜奈, 鈴木潤, 乾健太郎 (*第一著者と第二著者の貢献度は等しい). 
-                            <br>
-                            <strong>aoba_v3 bot: 多様な応答生成モデルとルールベースを統合したマルチモーダル雑談対話システム</strong>. 
-                            <br>
-                            <em>第96回人工知能学会 言語・音声理解と対話処理研究会 (第13回対話システムシンポジウム) (SLUD2022), 2022.</em>
-                            <br><br>
-                        </li>
-                        <li>
-                            <u>守屋彰二</u>, 岸波洋介, 徳久良子, 乾健太郎. 
-                            <br>
-                            <strong>能動的な対話システム実現に向けた談話マーカーの利用の検討</strong>. 
-                            <br>
-                            <em>第17回NLP若手の会 シンポジウム (YANS2022), 2022.</em>
-                            <br><br>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <section id="Awards" class="Awards wrapper">
-                <h1>Awards</h1>
-                <div class="content-ja">
-                    <ul>
-                        <li>
-                            言語処理学会第31回年次大会 (NLP2025) 委員特別賞
-                        </li>
-                        <li>
-                            第99回人工知能学会 言語・音声理解と対話処理研究会 (第14回対話システムシンポジウム) (SLUD2023)
-                            <p>対話システムライブコンペティション6 シチュエーショントラック 最優秀賞 (第1位)</p>
-                        </li>
-                        <li>
-                            第96回人工知能学会 言語・音声理解と対話処理研究会 (第13回対話システムシンポジウム) (SLUD2022)
-                            <p>対話システムライブコンペティション5 オープントラック 優秀賞 (第2位)</p>
-                            <br>
-                        </li>
-                    </ul>
-                    <br>
-                </div>
-            </section>
-            <section id="Activities" class="Others wrapper">
-                <h1>Activities</h1>
-                <!-- <br> -->
-                <h2>Program Committee</h2>
-                <div class="content">
-                    <ul>
-                        <li>
-                            <p><a href="https://sites.google.com/view/dslc7">Dialogue System Live Competition</a> Organizer, 2023 ~</p>
-                        </li>
-                        <li>
-                            <p><a href="https://yans.anlp.jp/entry/yans2024members">YANS</a> Committee Member, 2024 ~</p>
-                        </li>
-                    </ul>
-                    <br>
-                </div>
-            </section>
-            <section id="Contact" class="Contact wrapper">
-                <h1>Contact</h1>
-                <div class="content">
-                    <p>shoji.moriya.q7@dc.tohoku.ac.jp</p>
-                    <br>
-                </div>
-            </section>
-        </main>
-        <footer>
-            <p>Last modified: March 17th, 2025</p>
-        </footer>
-    </body>
+          </li>
+          <li>
+            <span class="edu-period">2019 &ndash; 2023</span>
+            <div>
+              <strong><span class="en">B.E., Department of Electrical, Information and Physics Engineering, Tohoku University</span><span class="ja">東北大学 工学部 電気情報物理工学科</span></strong>
+              <p><span class="en">Tohoku NLP Group (Sakaguchi, Inui Lab)</span><span class="ja">自然言語処理研究グループ（坂口・乾研究室）</span></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Activities -->
+    <section id="activities" class="section">
+      <div class="container">
+        <h2 class="section-title"><span class="en">Activities</span><span class="ja">活動</span></h2>
+        <h3 class="subsection-title"><span class="en">Program Committee</span><span class="ja">委員</span></h3>
+        <ul class="activity-list">
+          <li>
+            <a href="https://sites.google.com/view/dslc7">Dialogue System Live Competition</a> &mdash; <span class="en">Organizer</span><span class="ja">運営委員</span>, 2023 &ndash;
+          </li>
+          <li>
+            <a href="https://yans.anlp.jp/entry/yans2024members">YANS</a> &mdash; <span class="en">Committee Member</span><span class="ja">運営委員</span>, 2024&ndash;2025
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title"><span class="en">Contact</span><span class="ja">連絡先</span></h2>
+        <p class="contact-email"><a href="mailto:shoji.moriya.q7@dc.tohoku.ac.jp">shoji.moriya.q7@dc.tohoku.ac.jp</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p class="last-updated">Last updated: May 2026</p>
+  </footer>
+
+  <script>
+    // Language toggle
+    const langToggle = document.getElementById('langToggle');
+    langToggle.addEventListener('click', () => {
+      const isEn = document.body.classList.contains('lang-en');
+      document.body.classList.replace(isEn ? 'lang-en' : 'lang-ja', isEn ? 'lang-ja' : 'lang-en');
+    });
+
+    // Navbar scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // Mobile menu toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('open');
+      toggle.classList.toggle('active');
+    });
+
+    // Close menu on link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        links.classList.remove('open');
+        toggle.classList.remove('active');
+      });
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(anchor.getAttribute('href'));
+        if (target) {
+          const offset = nav.offsetHeight + 8;
+          window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Fade-in on scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.section').forEach(s => observer.observe(s));
+
+    // Dark mode toggle
+    const themeToggle = document.getElementById('themeToggle');
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark');
+    }
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+    });
+
+    // Typing animation
+    (function() {
+      const isEn = document.body.classList.contains('lang-en');
+      const h1 = document.querySelector('.hero-text h1');
+      const enSpan = h1.querySelector('.en');
+      const jaSpan = h1.querySelector('.ja');
+      const targetSpan = isEn ? enSpan : jaSpan;
+      const fullText = targetSpan.textContent;
+      targetSpan.textContent = '';
+      const cursor = document.createElement('span');
+      cursor.className = 'typing-cursor';
+      targetSpan.appendChild(cursor);
+      let i = 0;
+      function type() {
+        if (i < fullText.length) {
+          cursor.before(fullText[i]);
+          i++;
+          setTimeout(type, 60);
+        } else {
+          setTimeout(() => cursor.remove(), 1200);
+        }
+      }
+      setTimeout(type, 400);
+    })();
+  </script>
+
+</body>
 </html>
