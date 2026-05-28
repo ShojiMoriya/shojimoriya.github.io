@@ -8,11 +8,71 @@
   <meta property="og:title" content="Shoji Moriya | Ph.D. Student, Tohoku University">
   <meta property="og:description" content="Ph.D. student at Tohoku University, researching NLP, dialogue systems, and HCI.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://shojimoriya.github.io/profile.png">
+  <meta property="og:image" content="profile.png">
   <link rel="icon" href="shortcut.ico">
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="lang-en">
+
+  <!-- Bird (pixel art budgerigar / ドット絵セキセイインコ) -->
+  <div class="bird perched" id="bird">
+    <svg viewBox="0 0 14 16" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+      <!-- head -->
+      <rect x="7" y="0" width="3" height="1" fill="#fde047"/>
+      <rect x="6" y="1" width="5" height="1" fill="#fde047"/>
+      <rect x="6" y="2" width="3" height="1" fill="#fde047"/>
+      <rect x="6" y="3" width="4" height="1" fill="#fde047"/>
+      <rect x="11" y="3" width="1" height="1" fill="#fde047"/>
+      <rect x="6" y="4" width="5" height="1" fill="#fde047"/>
+      <rect x="7" y="5" width="2" height="1" fill="#fde047"/>
+      <!-- eye -->
+      <rect x="9" y="2" width="1" height="1" fill="#1e293b"/>
+      <rect x="10" y="2" width="1" height="1" fill="#fff"/>
+      <!-- cheek -->
+      <rect x="10" y="3" width="1" height="1" fill="#a78bfa"/>
+      <!-- beak -->
+      <rect x="12" y="3" width="1" height="1" fill="#f59e0b"/>
+      <rect x="11" y="4" width="2" height="1" fill="#f59e0b"/>
+      <!-- throat spots -->
+      <rect x="9" y="5" width="2" height="1" fill="#1e293b"/>
+      <!-- body -->
+      <rect x="5" y="6" width="6" height="1" fill="#60a5fa"/>
+      <rect x="4" y="7" width="4" height="1" fill="#60a5fa"/>
+      <rect x="10" y="7" width="1" height="1" fill="#60a5fa"/>
+      <rect x="4" y="8" width="4" height="1" fill="#60a5fa"/>
+      <rect x="4" y="9" width="4" height="1" fill="#60a5fa"/>
+      <rect x="5" y="10" width="5" height="1" fill="#60a5fa"/>
+      <rect x="5" y="11" width="4" height="1" fill="#60a5fa"/>
+      <!-- breast -->
+      <rect x="8" y="7" width="2" height="1" fill="#bfdbfe"/>
+      <rect x="8" y="8" width="3" height="1" fill="#bfdbfe"/>
+      <rect x="8" y="9" width="2" height="1" fill="#bfdbfe"/>
+      <!-- tail -->
+      <rect x="4" y="12" width="2" height="1" fill="#3b82f6"/>
+      <rect x="3" y="13" width="2" height="1" fill="#3b82f6"/>
+      <rect x="2" y="14" width="2" height="1" fill="#3b82f6"/>
+      <!-- feet -->
+      <rect x="6" y="12" width="1" height="1" fill="#78716c"/>
+      <rect x="8" y="12" width="1" height="1" fill="#78716c"/>
+      <rect x="5" y="13" width="2" height="1" fill="#78716c"/>
+      <rect x="8" y="13" width="2" height="1" fill="#78716c"/>
+      <!-- wing down (folded) -->
+      <g class="bird-wing-down">
+        <rect x="3" y="7" width="1" height="1" fill="#3b82f6"/>
+        <rect x="2" y="8" width="2" height="1" fill="#3b82f6"/>
+        <rect x="2" y="9" width="2" height="1" fill="#3b82f6"/>
+        <rect x="3" y="10" width="2" height="1" fill="#3b82f6"/>
+      </g>
+      <!-- wing up (extended) -->
+      <g class="bird-wing-up">
+        <rect x="0" y="2" width="3" height="1" fill="#3b82f6"/>
+        <rect x="1" y="3" width="3" height="1" fill="#3b82f6"/>
+        <rect x="1" y="4" width="4" height="1" fill="#3b82f6"/>
+        <rect x="2" y="5" width="3" height="1" fill="#3b82f6"/>
+        <rect x="3" y="6" width="2" height="1" fill="#60a5fa"/>
+      </g>
+    </svg>
+  </div>
 
   <!-- Navigation -->
   <nav class="nav" id="nav">
@@ -315,6 +375,145 @@
       document.body.classList.toggle('dark');
       localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
     });
+
+    // Bird animation
+    (function() {
+      var bird = document.getElementById('bird');
+      if (!bird || matchMedia('(pointer: coarse)').matches) return;
+
+      var IDLE_DELAY = 10000;
+      var BIRD_W = 28;
+      var BIRD_H = 32;
+      var animId = null;
+      var idleTimer = null;
+      var mouseX = window.innerWidth / 2;
+      var mouseY = window.innerHeight / 2;
+      var state = 'perched';
+      var lastPerchIdx = -1;
+
+      // Perch at top-left or top-right corner
+      function getPerchPos() {
+        var w = window.innerWidth;
+        var spots = [
+          { x: 16, y: 6 },
+          { x: w - BIRD_W - 16, y: 6 }
+        ];
+        var idx;
+        do { idx = Math.floor(Math.random() * spots.length); }
+        while (idx === lastPerchIdx && spots.length > 1);
+        lastPerchIdx = idx;
+        return spots[idx];
+      }
+
+      // Initial perch
+      var perch = getPerchPos();
+      bird.style.left = perch.x + 'px';
+      bird.style.top = perch.y + 'px';
+      updatePerchFacing();
+
+      function setState(s) {
+        state = s;
+        bird.className = 'bird ' + s;
+      }
+
+      function updateFacing(targetX) {
+        var cx = parseFloat(bird.style.left) + BIRD_W / 2;
+        if (targetX < cx) {
+          bird.classList.add('face-left');
+        } else {
+          bird.classList.remove('face-left');
+        }
+      }
+
+      function updatePerchFacing() {
+        var cx = parseFloat(bird.style.left) + BIRD_W / 2;
+        if (cx > window.innerWidth / 2) {
+          bird.classList.add('face-left');
+        } else {
+          bird.classList.remove('face-left');
+        }
+      }
+
+      function cancelFlight() {
+        if (animId) { cancelAnimationFrame(animId); animId = null; }
+      }
+
+      // Animate along an arc with bobbing
+      function animateFlight(toX, toY, newState, onDone) {
+        cancelFlight();
+        var fromX = parseFloat(bird.style.left);
+        var fromY = parseFloat(bird.style.top);
+        var dx = toX - fromX;
+        var dy = toY - fromY;
+        var dist = Math.sqrt(dx * dx + dy * dy);
+        var duration = Math.max(500, Math.min(dist * 2.5, 1600));
+        var arcH = Math.min(dist * 0.22, 70);
+        var startTime = null;
+
+        setState(newState);
+        updateFacing(toX + BIRD_W / 2);
+
+        function frame(now) {
+          if (!startTime) startTime = now;
+          var t = Math.min((now - startTime) / duration, 1);
+          // ease-in-out cubic
+          var e = t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t+2, 3) / 2;
+
+          var x = fromX + dx * e;
+          var y = fromY + dy * e;
+          // parabolic arc (fly upward then down)
+          var arc = -arcH * 4 * t * (1 - t);
+          // small bob from wing flaps
+          var bob = Math.sin(t * Math.PI * 8) * 2.5;
+
+          bird.style.left = x + 'px';
+          bird.style.top = (y + arc + bob) + 'px';
+
+          if (t < 1) {
+            animId = requestAnimationFrame(frame);
+          } else {
+            animId = null;
+            onDone();
+          }
+        }
+        animId = requestAnimationFrame(frame);
+      }
+
+      function flyToCursor() {
+        animateFlight(
+          mouseX - BIRD_W / 2, mouseY - BIRD_H / 2,
+          'flying',
+          function() { setState('landed'); }
+        );
+      }
+
+      function returnToPerch() {
+        var p = getPerchPos();
+        animateFlight(p.x, p.y, 'returning', function() {
+          setState('perched');
+          updatePerchFacing();
+          startIdleTimer();
+        });
+      }
+
+      function startIdleTimer() {
+        clearTimeout(idleTimer);
+        idleTimer = setTimeout(function() {
+          if (state === 'perched') flyToCursor();
+        }, IDLE_DELAY);
+      }
+
+      document.addEventListener('mousemove', function(e) {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        if (state === 'landed' || state === 'flying') {
+          returnToPerch();
+        }
+        if (state === 'perched') startIdleTimer();
+      });
+
+      startIdleTimer();
+    })();
 
     // Typing animation
     (function() {
